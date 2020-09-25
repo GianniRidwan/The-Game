@@ -1,15 +1,16 @@
 const dead = "<img src= youdied.jpg>";
 
 alert("Beantwoord alle vragen met de antwoorden tussen de aanhalingstekens.");
-alert("Je bent op vakantie maar raakt verdwaald in een gevaarlijk bos waar moordenaars rondlopen. Je hebt een rugzak bij je met daarin een tent en eten voor 1 dag.");
+alert("Je bent op vakantie maar raakt verdwaald in een gevaarlijk bos waar moordenaars rondlopen. Je hebt een rugzak bij je met daarin een tent, eten voor 1 dag en een waterfilter.");
 alert("Het is 23:00 en zoekt een goede plek om te overnachten.");
 
 var sleep = prompt("Je komt een verlaten hut tegen midden in het bos. Ga je in de 'hut' overnachten of ga je ergens in het bos je 'tent' opzetten?");
 
 if (sleep.toLowerCase() == "hut") {
 	alert("De deur stond gewoon open en je kan veilig naar binnen.");
-	alert("Je hebt erg honger dus gaat opzoek naar wat eten.");
-	alert("Je vind ingeblikt eten in de kast staan maar het is over de datum.");
+	alert("Je hebt erg honger dus gaat opzoek naar wat eten en verkent de hut.");
+	alert("De hut is voorzien van zonnepanelen en er staat een enorme vriezer die leeg is in de hut. Ook vind je een lege jerrycan van 10 liter.");
+	alert("Je vind ingeblikt eten in een kast staan maar het is over de datum.");
 	var food = prompt("Wil je het 'ingeblikt' voer eten om je eigen eten te besparen of eet je je 'eigen' eten?");
 
 		if (food.toLowerCase() == "eigen") {
@@ -25,10 +26,20 @@ if (sleep.toLowerCase() == "hut") {
 					alert("Je ontwijkt zijn bijl en haalt uit met het mes.");
 					alert("Je snijd in één keer zijn strot open en hij bloed dood.");
 					alert("Er ligt nu een lichaam in je hut waar je vanaf wilt.");
-					var body = prompt("");
+					var body = prompt("'Begraaf' je het lichaam buiten je hut of leg je hem in de 'vriezer'?");
+
+						if (body.toLowerCase() == "vriezer") {
+							alert("Je legt het lichaam in de vriezer");
+						}
+						else {
+							alert("Je begraaft het lichaam buiten je hut.");
+						}
+
+							alert("Je begint ondertussen honger en dorst te krijgen. De hut is niet voorzien van water.");
+							
+
 
 				}
-
 
 				else {
 					alert("Net wanneer je het geweer pakt breekt er iemand door de voordeur.");
@@ -37,8 +48,8 @@ if (sleep.toLowerCase() == "hut") {
 					alert("De man haalt nog een keer uit en snijdt met de bijl je halsslagader open.");
 					document.write(dead);
 				}
-		}
 
+		}
 
 		else {
 			alert("Je krijgt voedselvergiftiging en hebt geen medicijnen bij je.");
@@ -46,7 +57,6 @@ if (sleep.toLowerCase() == "hut") {
 		}
 
 }
-
 
 else {
 	alert("Je vind een goede plek om je tent neer te zetten en gaat slapen.");
